@@ -5,9 +5,9 @@ from time import time
 import torch
 
 # model
-model = YOLO("Models/yolov8n_improvedECA_best.pt")
-model.export(format="ncnn")
-model = YOLO("Models/yolov8n_improvedECA_best_ncnn_model")
+model = YOLO("Models/yolov8s_finetuned_best.pt")
+# model.export(format="ncnn")
+# model = YOLO("Models/yolov8n_finetuned_best_ncnn_model")
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print('Using device:', device)
@@ -84,10 +84,10 @@ for name in videoNames:
 
     cap.release()
 
-avgTime = totalTime / 5
+
 print("\n\nTotal: ", totalTime, "s")
 print("Total Frames: ", frameCount)
-timePerFrame = ((avgTime / frameCount) * 1000)
+timePerFrame = ((totalTime / frameCount) * 1000)
 
 print("Avg per frame: ", timePerFrame, "ms")
-print("FPS: ", (1 / timePerFrame) * 1000, "fps")
+print("FPS: ", frameCount / totalTime, "fps")
