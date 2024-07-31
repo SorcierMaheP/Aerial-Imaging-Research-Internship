@@ -36,17 +36,18 @@ for name in videoNames:
     cap.set(4, 480)
 
     start = time()
-    frame = 0
 
     while True:
 
-        print(frame)
-        frame += 1
+        print("progress: ", (frameCount / 600)*100, " %")
+
         success, img = cap.read()
 
         if not success:
             break
         results = model(img, stream=True, device=device)
+
+        frameCount += 1
 
         # coordinates
         for r in results:
@@ -75,8 +76,6 @@ for name in videoNames:
                 fontScale = 1
                 color = (255, 0, 0)
                 thickness = 2
-
-    frameCount += frame
 
     end = time()
     # print("Total time = ", (end - start))
