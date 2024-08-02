@@ -1,0 +1,18 @@
+description: Ultralytics YOLOv8n_finetuned_best model trained on /content/augmented_dataset/Trspeclass.v2i.yolov8/data.yaml
+author: Ultralytics
+date: '2024-07-31T17:50:15.437143'
+version: 8.2.70
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: coconut
+  1: coniferous
+  2: date palm
+  3: deciduous
+  4: banana
