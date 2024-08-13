@@ -78,18 +78,19 @@ with open(config_file_path, "w+") as f:
 print(f"Wrote to {config_file_path}")
 
 # ----------------------------------------------------------------------------
-ICBAMpython = '''# ICBAM block: Improved CBAM 
+ICBAMpython = '''# ICBAM block: Improved CBAM
+import torch.nn as nn
+import torch
 
 class ImprovedChannelAttention(nn.Module):
 
     def __init__(self, channels: int, k_size=3) -> None:
         """Initializes the class and sets the basic configurations and instance variables required."""
-        super().__init__()
+        super(ImprovedChannelAttention, self).__init__()
         self.avgPool = nn.AdaptiveAvgPool2d(1)
         self.maxPool = nn.AdaptiveMaxPool2d(1)
-        self.fc = nn.Conv1d(
-            1, 1, kernel_size=k_size, padding=(k_size - 1) // 2, bias=False
-        )
+        self.fc = nn.Conv1d(1, 1, kernel_size=k_size, padding=(k_size - 1) // 2, bias=False)
+        self.fc1 = nn.Conv1d(1, 1, kernel_size=k_size, padding=(k_size - 1) // 2, bias=False)
         self.act = nn.Sigmoid()
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
@@ -97,15 +98,9 @@ class ImprovedChannelAttention(nn.Module):
         yAvgPool = self.avgPool(x)
         yMaxPool = self.maxPool(x)
 
-        avgConv = (
-            self.fc(yAvgPool.squeeze(-1).transpose(-1, -2))
-            .transpose(-1, -2)
-            .unsqueeze(-1)
-        )
+        avgConv = self.fc(yAvgPool.squeeze(-1).transpose(-1, -2)).transpose(-1, -2).unsqueeze(-1)
 
-        maxConv = self.fc(
-            (yMaxPool.squeeze(-1).transpose(-1, -2)).transpose(-1, -2).unsqueeze(-1)
-        )
+        maxConv = self.fc1(yMaxPool.squeeze(-1).transpose(-1, -2)).transpose(-1, -2).unsqueeze(-1)
 
         # Multi-scale information fusion
         y = self.act(avgConv + maxConv)
