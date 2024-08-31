@@ -1,5 +1,10 @@
 # Onboard Classification of Tree Species using RGB UAV Imagery
 
+## Performance
+Working of YOLOv8s ICBAM on a sample video with dense coconut plantations.
+
+https://github.com/user-attachments/assets/ec52e710-1269-45cb-aa83-eed2f2e723c7
+
 ## Datasets
 ### MTAD
 The original Multi-Tree Species Aerial Detection (MTAD) Dataset created by Anish Natekar et al., consisting of five classes, namely; Banana, Coconut, Date Palm, Deciduous and Coniferous. This was very imbalanced, and except banana, all classes had around 1.5k instances, while the recommended minimum amount is 10k <a href="https://docs.ultralytics.com/yolov5/tutorials/tips_for_best_training_results/">instances per class</a>.
