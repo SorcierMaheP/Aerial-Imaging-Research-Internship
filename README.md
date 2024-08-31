@@ -3,7 +3,7 @@ Onboard Classification of Tree Species using RGB UAV Imagery
 # Datasets
 The new and improved Bi-Class Dataset we created, which features
 two classes, namely; Banana and Coconut, with 11.6k images
-of Banana trees, and 14.4k images of Coconut trees
+of Banana trees, and 14.4k images of Coconut trees.  
 BiClass Dataset: https://drive.google.com/file/d/1YzVk-7L4Dj0rf303fNbhq1Hqw14LpEEk/view?usp=drive_link 
 
 # To Use the New Models
