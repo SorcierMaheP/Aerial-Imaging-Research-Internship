@@ -3,7 +3,7 @@
 ## Performance
 Working of YOLOv8s ICBAM on a sample video with dense coconut plantations.
 
-https://github.com/user-attachments/assets/ec52e710-1269-45cb-aa83-eed2f2e723c7
+https://github.com/user-attachments/assets/2032b145-5caf-4013-8a99-30e4ee86436a
 
 ## Datasets
 ### MTAD
