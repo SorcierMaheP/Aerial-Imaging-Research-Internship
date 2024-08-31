@@ -6,7 +6,7 @@ two classes, namely; Banana and Coconut, with 11.6k images
 of Banana trees, and 14.4k images of Coconut trees.  
 BiClass Dataset: https://drive.google.com/file/d/1YzVk-7L4Dj0rf303fNbhq1Hqw14LpEEk/view?usp=drive_link 
 
-# To Use the New Models
+## To Use the New Models
 Before using the new models, the new modules have to be added to your local ultralytics package. To do this, simply run `editCode.py`.  
 This will add the HyP-ECA module to the package, along with the yaml file for YOLOv8 HyP-ECA.  
 To add the ICBAM module, run `editCodeICBAM.py` AFTER running `editCode.py`.  
