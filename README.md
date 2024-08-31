@@ -16,7 +16,7 @@ To add the yaml file for YOLOv10 ICBAM, run `addICBAMv10.py` after runnning `edi
 #### NOTE: Run these codes only ONCE. Running them multiple times will add the modules again, which could lead to issues.  
 
 ## To Train the Models
-Run the following command in terminal:
+Run the following command in terminal:  
     `yolo detect train data=<path/to/data.yaml> model=<name_of_pretrained_model.pt> epochs=100 imgsz=640 batch=0.85 patience=10 plots=True`
 
 
