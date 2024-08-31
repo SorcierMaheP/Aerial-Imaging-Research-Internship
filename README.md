@@ -1,5 +1,9 @@
 # Onboard Classification of Tree Species using RGB UAV Imagery
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/f18e01cb-8711-4e54-85d4-95c4a5ce9578" />
+</div>
+
 ## Performance
 Working of YOLOv8s ICBAM on a sample video with dense coconut plantations.
 
