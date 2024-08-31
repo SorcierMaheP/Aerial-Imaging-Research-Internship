@@ -22,8 +22,8 @@ BiClass Dataset: https://drive.google.com/file/d/1YzVk-7L4Dj0rf303fNbhq1Hqw14LpE
   
 #### NOTE: Run these codes only ONCE. Running them multiple times will add the modules again, which could lead to issues.  
 
-YOLO supports many different types of inference sources as stated in https://docs.ultralytics.com/modes/predict/#inference-sources.
-Inference can be done by using the following shell command:
+YOLO supports many different sources for running inference, as stated <a href="https://docs.ultralytics.com/modes/predict/#inference-sources">here</a>  
+Inference can be run by using the following shell command:
 ```
 yolo predict model=<path/to/model.pt> source=<path/to/source>
 ```
