@@ -15,7 +15,7 @@ yolo_model_cfg = '''# Ultralytics YOLO , AGPL-3.0 license
 # This is a modified version with HyPECA module
 
 # Parameters
-nc: 80 # number of classes
+nc: 2 # number of classes
 scales: # model compound scaling constants, i.e. 'model=yolov8n.yaml' will call yolov8.yaml with scale 'n'
   # [depth, width, max_channels]
   n: [0.33, 0.25, 1024] # YOLOv8n summary: 225 layers,  3157200 parameters,  3157184 gradients,   8.9 GFLOPs

@@ -13,7 +13,7 @@ yolo_model_cfg = '''# Ultralytics YOLO , AGPL-3.0 license
 # YOLOv10 ICBAM object detection model. For Usage examples see https://docs.ultralytics.com/tasks/detect
 
 # Parameters
-nc: 80 # number of classes
+nc: 2
 scales: # model compound scaling constants, i.e. 'model=yolov10n.yaml' will call yolov10.yaml with scale 'n'
   # [depth, width, max_channels]
   n: [0.33, 0.25, 1024]
@@ -67,7 +67,7 @@ head:
   #Improved CBAM Block
   - [-1, 1, ICBAM, [512,]]
 
-  - [[16, 19, 22], 1, v10Detect, [nc]] # Detect(P3, P4, P5)
+  - [[18, 22, 26], 1, v10Detect, [nc]] # Detect(P3, P4, P5)
 
 '''
 model_cfg_path_rel = 'cfg/models/v10'
