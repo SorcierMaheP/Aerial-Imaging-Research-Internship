@@ -4,6 +4,9 @@
   <img src="https://github.com/user-attachments/assets/f18e01cb-8711-4e54-85d4-95c4a5ce9578" />
 </div>
 
+## Reports 
+The two monthly reports, along with the final report paper, can be found in /Docs.
+
 ## Performance
 Working of YOLOv8s ICBAM on a sample video with dense coconut plantations.
 
