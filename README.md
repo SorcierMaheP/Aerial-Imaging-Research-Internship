@@ -5,7 +5,7 @@
 </div>
 
 ## Reports 
-The two monthly reports, along with the final report paper, can be found in /Docs.
+The two monthly reports, along with the final report paper, can be found in the Docs directory.
 
 ## Performance
 Working of YOLOv8s ICBAM on a sample video with dense coconut plantations.
